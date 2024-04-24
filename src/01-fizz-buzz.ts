@@ -6,23 +6,24 @@
  * - Múltiplos de 5 por la palabra "buzz".
  * - Múltiplos de 3 y de 5 a la vez por la palabra "fizzbuzz".
  */
-console.log('********** 01 FizzBuzz **********');
+export default function (): (string | number)[] {
+  const output = [];
 
-const from = 1;
-const to = 100;
-const fizz = 'fizz';
-const buzz = 'buzz';
-
-for (let index = from; index <= to; index++) {
-  if (index % 3 === 0 && index % 5 === 0) {
-    console.log(`${fizz}${buzz}\n`);
-  } else if (index % 3 === 0) {
-    console.log(`${fizz}\n`);
-  } else if (index % 5 === 0) {
-    console.log(`${buzz}\n`);
-  } else {
-    console.log(`${index}\n`);
+  for (let index = 1; index <= 100; index++) {
+    if (index % 3 === 0 && index % 5 === 0) {
+      // console.log('fizzbuzz\n');
+      output.push('fizzbuzz');
+    } else if (index % 3 === 0) {
+      // console.log('fizz\n');
+      output.push('fizz');
+    } else if (index % 5 === 0) {
+      // console.log('buzz\n');
+      output.push('buzz');
+    } else {
+      // console.log('index\n');
+      output.push(index);
+    }
   }
-}
 
-console.log('********** 01 FizzBuzz FIN **********');
+  return output;
+}
