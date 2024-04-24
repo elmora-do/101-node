@@ -1,8 +1,7 @@
 {
-    "diff": true,
     "extension": ["ts"],
     "spec": "test/**/*.spec.ts",
     "require": ["ts-node/register"],
     "package": "./package.json",
-    "reporter": "spec"    
+    "diff": false
 }
